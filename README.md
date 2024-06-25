@@ -4,8 +4,8 @@ Order of execution for input_saver
 2) python3 voskhear.py {recording name}
 
 Results
-1) -> ./recordings gets a new .wav recording
+1) -> ./recordings gets a new .wav recording <br>
    -> ./log/log_rec.txt gets a new entry for the newest recording
 
-2) -> ./results gets a new test file with transcribed text
+2) -> ./results gets a new test file with transcribed text <br>
    -> ./log/log.txt gets a new entry for the newest test  
