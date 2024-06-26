@@ -1,11 +1,13 @@
 #!/bin/bash
 
-cd recordings
-> recording.wav
+echo "INFO: Cleaning recordings"
+cd recordings && > recording.wav
 
 cd ..
 
-cd results
-> test.txt
+echo "INFO: CLeaning results"
+cd results && > test.txt
 
 cd ..
+
+echo "INFO: Clean completed"

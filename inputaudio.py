@@ -13,7 +13,7 @@ def write_audio(recording, freq_aud) -> None:
 	write(storage, freq_aud, recording)
 
 def record_audio(freq_aud: int, duration: int):
-	recording = sd.rec(int(duration*freq_aud), samplerate = freq_aud, channels=1)
+	recording = sdt.rec(int(duration*freq_aud), samplerate = freq_aud, channels=1)
 	sd.wait()
 	return recording
 
@@ -26,7 +26,6 @@ def main():
 		sd.default.device = fd.find_device()
 	except Exception as e:
 		print(f"Finding {fd.DEVICE_NAME} failed: {e}\n")
-
 	try:
 		recording = record_audio(freq_aud, duration)
 	except Exception as e:
