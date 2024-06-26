@@ -8,6 +8,7 @@
    <li>To clean up the result and recording folders, run <b>./clean</b></li>
 </ul>
 
+<h2> Full Release with tracking capabilities </h2>
 Order of execution for input_saver ( FULL RELEASE, available in complete branch )
 
 1) python3 inputaudio.py {duration of recording}
