@@ -25,18 +25,17 @@ def main():
 	try:
 		sd.default.device = fd.find_device()
 	except Exception as e:
-		print(f"Finding {fd.DEVICE_NAME} failed: {e}")
+		print(f"Finding {fd.DEVICE_NAME} failed: {e}\n")
 
 	try:
 		recording = record_audio(freq_aud, duration)
-		print(recording)
 	except Exception as e:
-		print(f"Recording audio failed: {e}")
+		print(f"Recording audio failed: {e}\n")
 
 	try:
 		write_audio(recording, freq_aud)
 	except Exception as e:
-		print(f"Writing audio failed: {e}")
+		print(f"Writing audio failed: {e}\n")
 
 if __name__ == "__main__":
 	main()
