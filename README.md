@@ -1,4 +1,4 @@
-Order of execution for input_saver
+Order of execution for input_saver ( FULL RELEASE, available in complete branch )
 
 1) python3 inputaudio.py {duration of recording}
 2) python3 voskhear.py {recording name}
