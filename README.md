@@ -9,7 +9,7 @@
 </ul>
 
 <h2> Full Release with tracking capabilities </h2>
-Order of execution for input_saver ( FULL RELEASE, available in complete branch )
+<b>(Check complete branch)</b> Order of execution for input_saver
 
 1) python3 inputaudio.py {duration of recording}
 2) python3 voskhear.py {recording name}
