@@ -12,8 +12,8 @@
 <h2> Full Release with tracking capabilities </h2>
 <b>(Check complete branch)</b> Order of execution for input_saver
 
-1) python3 inputaudio.py {duration of recording}
-2) python3 voskhear.py {recording name}
+1) python3 inputaudio.py
+2) python3 voskhear.py
 
 Results
 1) -> ./recordings gets a new .wav recording
