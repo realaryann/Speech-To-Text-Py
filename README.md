@@ -3,7 +3,8 @@
 <p><b>How to use:</b></p>
 <ul>
    <li>Clone entire directory into any folder of your choice</li>
-   <li>Inside the input_saver director, run <b>./input.sh </b>, where seconds is the length of recording</li>
+   <li>Inside the input_saver director, run <b>sudo ./input.sh </b>, where seconds is the length of recording</li>
+   <li> <b>sudo privilages are required because the keyboard python module requires them to operate </b></li>
    <li>After the process finishes, check results/test.txt for the transcription of the recording</li>
    <li>To clean up the result and recording folders, run <b>./clean</b></li>
 </ul>
