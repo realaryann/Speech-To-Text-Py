@@ -6,10 +6,8 @@ import sys
 import sounddevice as sd
 import find_device as fd
 import numpy
-from pynput import keyboard
+import keyboard
 from scipy.io.wavfile import write
-
-duration = 0
 
 def write_audio(recording, freq_aud) -> None:
 	storage = f"./recordings/recording.wav"
@@ -20,24 +18,28 @@ def record_audio(freq_aud: int, duration: int):
 	sd.wait()
 	return recording
 
-def decide() -> int:
-	print("R: 5 Seconds")
-	print("T: 10 Seconds")
-	print("Y: 20 Seconds")
-	inp = input()
-	while (inp not in "rRtTyY"):
-		inp = input()
-	if (inp in "rR" and len(inp) == 1):
-		return 5
-	elif (inp in 'tT' and len(inp) == 1):
-		return 10
-	elif (inp in 'yY' and len(inp) == 1):
-		return 20 
+def read_keyboard():
+	while True:
+		if keyboard.is_pressed('r'):
+			return 5
+		elif keyboard.is_pressed('t'):
+			return 10
+		elif keyboard.is_pressed('y'):
+			return 20
 
 def main():
 	# Frequency of audio
 	freq_aud = 44100
-	duration = decide()
+	duration = 0
+	try:
+		print("R: 5 Seconds")
+		print("T: 10 Seconds")
+		print("Y: 20 Seconds")
+		print("\nINFO: Reading from the keyboard now")
+		duration = read_keyboard()
+	except:
+		print("\nError recording keyboard input")
+	print("\nINFO: Finished reading keyboard input")
 	try:
 		sd.default.device = fd.find_device()
 	except Exception as e:
