@@ -16,6 +16,6 @@ def on_press(key):
 
 # Collect events until released
 with keyboard.Listener(
-        on_press=on_press) as listener:
+       	on_press=on_press) as listener:
     listener.join()
 listener.start()
