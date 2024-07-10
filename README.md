@@ -8,8 +8,16 @@
    <li>Inside the input_saver directory, run <b>sudo ./input.sh</li>
    <li><b>sudo privilages are required because the keyboard python module requires them to operate </b></li>
    <li>After the process finishes, check results/test.txt for the transcription of the recording</li>
-   <li>To clean up the result and recording folders, run <b>./clean</b></li>
    <li>This package is supposed to work with https://github.com/realaryann/Keyword-Select-Service (service to extract keywords)</li>
+</ul>
+
+<h3>Required Python Libraries</h3>
+<ul>
+   <li>sounddevice</li>
+   <li>numpy</li>
+   <li>keyboard</li>
+   <li>scipy</li>
+   <li>vosk</li>
 </ul>
 
 <h3>Changing Sound Device</h3>
@@ -24,6 +32,12 @@
    <li>Navigate to input_saver/voskhear.py</li>
    <li>Replace the newf and filesrc variables (WARNING, could break everything!)</li>
 </ul>
+
+<h3>Cleaning Results</h3>
+<ul>
+   <li>Run ./clean.sh in ~/input_saver to clear out previous recordings and results</li>
+</ul>
+
 
 <h3> Full Release with tracking capabilities </h3>
 <b>(Check complete branch)</b> Order of execution for input_saver
