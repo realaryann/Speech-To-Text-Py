@@ -1,5 +1,8 @@
 import subprocess, sys, os, json
 from vosk import Model, KaldiRecognizer
+from vosk import SetLogLevel
+
+SetLogLevel(-1)
 
 SAMPLE_RATE = 16000
 CHUNK_SIZE = 4000

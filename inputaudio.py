@@ -42,11 +42,12 @@ def main():
 		while duration not in "rRtTyYzZ":
 			duration = input("Enter Key: ")
 		duration = validate(duration)
+		print("INFO: Finding device")
 		try:
 			sd.default.device = fd.find_device()
+			print("INFO: Found audio device")
 		except Exception as e:
 			print(f"Finding {fd.DEVICE_NAME} failed: {e}\n")
-
 		try:
 			print(f"INFO: Recording now, for {duration} seconds")
 			recording = record_audio(freq_aud, duration)
@@ -54,6 +55,7 @@ def main():
 			print(f"Recording audio failed: {e}\n")
 
 		try:
+			print("INFO: Writing audio to file now")
 			write_audio(recording, freq_aud)
 		except Exception as e:
 			print(f"Writing audio failed: {e}\n")
@@ -61,12 +63,12 @@ def main():
 		try:
 			filename = "recordings/recording.wav"
 			model_path = "/home/csrobot/vosktest/models/vosk-model-en-us-0.22"
-
+			print("INFO: Transcribing audio file now")
 			transcriber = v.Transcriber(model_path)
 			transcription = transcriber.transcribe(filename)
 
 			newf = "test.txt"
-
+			print("INFO: Writing transcription to results/test.txt now")
 			filesrc = f"./results/{newf}"
 			with open(filesrc, "w") as tf:
 				for i in transcription:
