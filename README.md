@@ -27,6 +27,13 @@
    <li>Replace the DEVICE_NAME variable with the name of the device</li>
 </ul>
 
+<h3>Keypress Input</h3>
+<ul>
+   <li>Input_Saver requires sudo privilages to run so that it can handle events pertaining to keypresses</li>
+   <li>The program loops indefinitely until the 'z' key is pressed, upon which it exits the program</li>
+   <li>There are 3 recording lengths, 5, 10, and 20 seconds. Each of these is linked to a keypress</li>
+</ul>
+
 <h3>Configuring Output</h3>
 <ul>
    <li>Navigate to input_saver/voskhear.py</li>
