@@ -14,7 +14,6 @@
 <ul>
    <li>sounddevice</li>
    <li>numpy</li>
-   <li>keyboard</li>
    <li>scipy</li>
    <li>vosk</li>
 </ul>
@@ -24,6 +23,18 @@
    <li>Navigate to input_saver/find_device.py</li>
    <li>In a terminal, check the name of your sounddevice by running python3 -m sounddevice</li>
    <li>Replace the DEVICE_NAME variable with the name of the device</li>
+</ul>
+
+<h3>Program Input</h3>
+<ul>
+   <li>Input_Saver currently takes string input from the command line</li>
+   <li>Input Mapping</li>
+   <ol>
+      <li>R: Record for 5 seconds</li>
+      <li>T: Record for 10 seconds</li>
+      <li>Y: Record for 20 seconds</li>
+      <li>Z: Exit program</li>
+   </ol>
 </ul>
 
 <h3>Configuring Output</h3>
