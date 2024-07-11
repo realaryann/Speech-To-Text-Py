@@ -19,16 +19,15 @@ def record_audio(freq_aud: int, duration: int):
 	sd.wait()
 	return recording
 
-def read_keyboard():
-	while True:
-		if keyboard.is_pressed('r'):
-			return 5
-		elif keyboard.is_pressed('t'):
-			return 10
-		elif keyboard.is_pressed('y'):
-			return 20
-		elif keyboard.is_pressed('z'):
-			exit()
+def validate(duration):
+	if duration in "rR":
+		return 5
+	elif duration in "tT":
+		return 10
+	elif duration in "yY":
+		return 20
+	elif duration in "zZ":
+		exit()
 
 def main():
 	# Frequency of audio
@@ -39,9 +38,10 @@ def main():
 		print("T: 10 Seconds")
 		print("Y: 20 Seconds")
 		print("Z: Exit Program")
-		print("\nINFO: Reading from the keyboard now")
-		duration = read_keyboard()
-
+		duration = input("Enter Key: ")
+		while duration not in "rRtTyYzZ":
+			duration = input("Enter Key: ")
+		duration = validate(duration)
 		try:
 			sd.default.device = fd.find_device()
 		except Exception as e:
