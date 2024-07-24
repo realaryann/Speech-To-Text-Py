@@ -1,4 +1,9 @@
-import subprocess, sys, os, json
+"""Backbround module used for calling vosk-transcriber on the wav file"""
+
+import subprocess
+import sys
+import os
+import json
 from vosk import Model, KaldiRecognizer
 from vosk import SetLogLevel
 
@@ -50,7 +55,6 @@ class Transcriber():
                 data = process.stdout.read(4000)
                 if len(data) == 0:
                     break
-                
                 if rec.AcceptWaveform(data):
                     transcription.append(self.fmt(rec.Result()))
 

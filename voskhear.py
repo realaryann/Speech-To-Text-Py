@@ -1,14 +1,16 @@
+"""Module used for converting wav recording to a transcribed textfile"""
+
 import voskcall as v
 
-filename = "recordings/recording.wav"
-model_path = "/home/csrobot/vosktest/models/vosk-model-en-us-0.22"
+FILENAME = "recordings/recording.wav"
+MODEL_PATH = "/home/csrobot/vosktest/models/vosk-model-en-us-0.22"
 
-transcriber = v.Transcriber(model_path)
-transcription = transcriber.transcribe(filename)
+transcriber = v.Transcriber(MODEL_PATH)
+transcription = transcriber.transcribe(FILENAME)
 
-newf = "test.txt"
+NEWF = "test.txt"
 
-filesrc = f"./results/{newf}"
+filesrc = f"./results/{NEWF}"
 with open(filesrc, "w") as tf:
-	for i in transcription:
-		tf.write(i+'\n')
+    for i in transcription:
+        tf.write(i+'\n')
