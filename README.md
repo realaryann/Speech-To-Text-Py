@@ -5,6 +5,7 @@
 <h3>Installation and Usage</h3>
 <ul>
    <li>Clone entire directory into any folder of your choice</li>
+   <li>Manually go through each file and change the absolute paths based on your file structure</li>
    <li>Inside the input_saver directory, run ./input.sh</li>
    <li>After the process finishes, check results/test.txt for the transcription of the recording</li>
    <li>This package is supposed to work with https://github.com/realaryann/Keyword-Select-Service (service to extract keywords)</li>
