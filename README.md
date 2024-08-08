@@ -2,6 +2,7 @@
 
 <h2>Python package to record input audio from a sound device and transcribe it into text for further operations</h2>
 
+
 <h3>Installation and Usage</h3>
 <ul>
    <li>Clone entire directory into any folder of your choice</li>
@@ -10,6 +11,8 @@
    <li>After the process finishes, check results/test.txt for the transcription of the recording</li>
    <li>This package is supposed to work with https://github.com/realaryann/Keyword-Select-Service (service to extract keywords)</li>
 </ul>
+
+![demo](https://github.com/user-attachments/assets/665b9240-7ab1-44d6-bfca-dc79c349dd11)
 
 <h3>Required Python Libraries</h3>
 <ul>
