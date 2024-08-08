@@ -12,7 +12,7 @@
    <li>This package is supposed to work with https://github.com/realaryann/Keyword-Select-Service (service to extract keywords)</li>
 </ul>
 
-![demo](https://github.com/user-attachments/assets/665b9240-7ab1-44d6-bfca-dc79c349dd11)
+![demo-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/dfde0522-dcb1-4e02-808e-352a528e27d5)
 
 <h3>Required Python Libraries</h3>
 <ul>
