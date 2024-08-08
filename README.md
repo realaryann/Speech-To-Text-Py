@@ -1,4 +1,4 @@
-<h1>Input_Saver</h1>
+<h1>Speech-To-Text-Py</h1>
 
 <h2>Python package to record input audio from a sound device and transcribe it into text for further operations</h2>
 
