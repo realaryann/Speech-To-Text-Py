@@ -1,9 +1,9 @@
-<h1>Speech-To-Text-Py</h1>
+<h1><ins>Speech-To-Text-Py</ins></h1>
 
-<h2>Python package to record input audio from a sound device and transcribe it into text for further operations</h2>
+<h2><ins>Python package to record input audio from a sound device and transcribe it into text for further operations</ins></h2>
 
 
-<h3>Installation and Usage</h3>
+<h3><ins>Installation and Usage</ins></h3>
 <ul>
    <li>Clone entire directory into any folder of your choice</li>
    <li>Manually go through each file and change the absolute paths based on your file structure</li>
@@ -14,7 +14,7 @@
 
 ![demo-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/dfde0522-dcb1-4e02-808e-352a528e27d5)
 
-<h3>Required Python Libraries</h3>
+<h3><ins>Required Python Libraries</ins></h3>
 <ul>
    <li>sounddevice</li>
    <li>numpy</li>
@@ -22,14 +22,14 @@
    <li>vosk</li>
 </ul>
 
-<h3>Changing Sound Device</h3>
+<h3><ins>Changing Sound Device</ins></h3>
 <ul>
    <li>Navigate to input_saver/find_device.py</li>
    <li>In a terminal, check the name of your sounddevice by running python3 -m sounddevice</li>
    <li>Replace the DEVICE_NAME variable with the name of the device</li>
 </ul>
 
-<h3>Program Input</h3>
+<h3><ins>Program Input</ins></h3>
 <ul>
    <li>Input_Saver currently takes string input from the command line</li>
    <li>Input Mapping</li>
@@ -41,18 +41,18 @@
    </ol>
 </ul>
 
-<h3>Configuring Output</h3>
+<h3><ins>Configuring Output</ins></h3>
 <ul>
    <li>Navigate to input_saver/voskhear.py</li>
    <li>Replace the newf and filesrc variables (WARNING, could break everything!)</li>
 </ul>
 
-<h3>Cleaning Results</h3>
+<h3><ins>Cleaning Results</ins></h3>
 <ul>
    <li>Run ./clean.sh in ~/input_saver to clear out previous recordings and results</li>
 </ul>
 
-<h3> Full Release with tracking capabilities </h3>
+<h3><ins>Full Release with tracking capabilities</ins></h3>
 <b>(Check complete branch)</b> Order of execution for input_saver
 
 1) python3 inputaudio.py
