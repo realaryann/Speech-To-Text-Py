@@ -53,11 +53,13 @@
 
 <h3><ins>Cleaning Results</ins></h3>
 <ul>
+   <li>Navigate to the parent directory (./input_saver
    <li>Run ./clean.sh in ~/input_saver to clear out previous recordings and results</li>
 </ul>
 
 <h3><ins>Full Release with tracking capabilities</ins></h3>
-<b>(Check complete branch)</b> Order of execution for input_saver
+<b>(Check complete branch)</b> 
+<br>Order of execution for input_saver
 
 1) python3 inputaudio.py
 2) python3 voskhear.py
