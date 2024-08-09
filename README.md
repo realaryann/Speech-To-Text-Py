@@ -9,6 +9,7 @@
    <li>Manually go through each file and change the absolute paths based on your file structure</li>
    <li>Inside the input_saver directory, run ./input.sh</li>
    <li>After the process finishes, check results/test.txt for the transcription of the recording</li>
+   <li>the voskcall.py file is used for working with the vosk-transcriber and must be carefully altered</li>
    <li>This package is supposed to work with https://github.com/realaryann/Keyword-Select-Service (service to extract keywords)</li>
 </ul>
 
@@ -41,6 +42,7 @@
       <li>Y: Record for 20 seconds</li>
       <li>Z: Exit program</li>
    </ol>
+   <li>The program will continue looping until valid input is entered</li>
 </ul>
 
 <h3><ins>Configuring Output</ins></h3>
