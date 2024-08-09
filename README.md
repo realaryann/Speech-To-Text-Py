@@ -14,6 +14,8 @@
 
 ![demo-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/dfde0522-dcb1-4e02-808e-352a528e27d5)
 
+<br>Working pipeline of recording, transcribing, and storing
+
 <h3><ins>Required Python Libraries</ins></h3>
 <ul>
    <li>sounddevice</li>
