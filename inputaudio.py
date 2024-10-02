@@ -21,11 +21,11 @@ def record_audio(freq_aud: int, duration: int):
 def validate(duration):
     if duration in "rR":
         return 5
-    if duration in "tT":
+    elif duration in "tT":
         return 10
-    if duration in "yY":
+    elif duration in "yY":
         return 20
-    if duration in "zZ":
+    elif duration in "zZ":
         return -1
     return -1
 
