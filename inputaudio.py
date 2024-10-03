@@ -69,9 +69,8 @@ def main():
             transcriber = v.Transcriber(model_path)
             transcription = transcriber.transcribe(filename)
             print("INFO: Transcription: ", transcription)
-            newf = "test.txt"
             print("INFO: Writing transcription to results/test.txt now")
-            filesrc = f"./results/{newf}"
+            filesrc = f"./results/test.txt"
             with open(filesrc, "w") as tf:
                 for i in transcription:
                     tf.write(i+'\n')
