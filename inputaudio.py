@@ -29,6 +29,37 @@ def validate(duration):
         return -1
     return -1
 
+def record_manager(freq_aud, duration):
+    try:
+        print(f"INFO: Recording now, for {duration} seconds")
+        recording = record_audio(freq_aud, duration)
+        return recording
+    except Exception as e:
+        raise RuntimeError(f"Recording audio failed: {e}\n")
+
+def write_manager(freq_aud, recording):
+    try:
+        print("INFO: Writing audio to file now")
+        write_audio(recording, freq_aud)
+    except Exception as e:
+        raise RuntimeError(f"Writing audio failed: {e}\n")
+
+def transcribe_manager():
+    try:
+        filename = "recordings/recording.wav"
+        model_path = "/home/csrobot/vosktest/models/vosk-model-en-us-0.22"
+        print("INFO: Transcribing audio file now")
+        transcriber = v.Transcriber(model_path)
+        transcription = transcriber.transcribe(filename)
+        print("INFO: Transcription: ", transcription)
+        print("INFO: Writing transcription to results/test.txt now")
+        filesrc = f"./results/test.txt"
+        with open(filesrc, "w") as tf:
+            for i in transcription:
+                tf.write(i+'\n')
+    except Exception as e:
+        raise RuntimeError("ERROR: Error while transcribing the recording")
+    
 def main():
     # Frequency of audio
     freq_aud = 44100
@@ -49,33 +80,10 @@ def main():
             sd.default.device = fd.find_device()
             print("INFO: Found audio device")
         except Exception as e:
-            print(f"Finding {fd.DEVICE_NAME} failed: {e}\n")
-        try:
-            print(f"INFO: Recording now, for {duration} seconds")
-            recording = record_audio(freq_aud, duration)
-        except Exception as e:
-            print(f"Recording audio failed: {e}\n")
-
-        try:
-            print("INFO: Writing audio to file now")
-            write_audio(recording, freq_aud)
-        except Exception as e:
-            print(f"Writing audio failed: {e}\n")
-
-        try:
-            filename = "recordings/recording.wav"
-            model_path = "/home/csrobot/vosktest/models/vosk-model-en-us-0.22"
-            print("INFO: Transcribing audio file now")
-            transcriber = v.Transcriber(model_path)
-            transcription = transcriber.transcribe(filename)
-            print("INFO: Transcription: ", transcription)
-            print("INFO: Writing transcription to results/test.txt now")
-            filesrc = f"./results/test.txt"
-            with open(filesrc, "w") as tf:
-                for i in transcription:
-                    tf.write(i+'\n')
-        except Exception as e:
-            print("ERROR: Error while transcribing the recording")
+            raise RuntimeError(f"Finding {fd.DEVICE_NAME} failed: {e}\n")
+        recording = record_manager(freq_aud, duration)
+        write_manager(freq_aud, recording)
+        transcribe_manager()
 
 if __name__ == "__main__":
     main()

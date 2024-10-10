@@ -1,5 +1,6 @@
 import inputaudio
 import find_device
+import pytest
 
 
 def test_duration():
